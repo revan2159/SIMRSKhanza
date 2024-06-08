@@ -28,7 +28,7 @@ if exist D:\ (
     echo "Working Directory: D:\SIMRSKhanza"
     echo "Show in New Window"
     echo.
-    mklink "%userFolder%\Desktop\Aplikasi.bat" "D:\SIMRSKhanza\Aplikasi.bat"
+    mklink /h D:\Desktop\Aplikasi.bat D:\SIMRSKhanza\Aplikasi.bat
     if %errorlevel% == 0 (
       echo Shortcut created successfully!
       pause
@@ -52,7 +52,7 @@ if exist D:\ (
     echo "Working Directory: E:\SIMRSKhanza"
     echo "Show in New Window"
     echo.
-    mklink "%userFolder%\Desktop\Aplikasi.bat" "E:\SIMRSKhanza\Aplikasi.bat"
+    mklink /h "%userFolder%\Desktop\Aplikasi.bat" "E:\SIMRSKhanza\Aplikasi.bat"
     if %errorlevel% == 0 (
       echo Shortcut created successfully!
       pause
@@ -76,7 +76,7 @@ if exist D:\ (
     echo "Working Directory: !userFolder!\SIMRSKhanza"
     echo "Show in New Window"
     echo.
-    mklink "%userFolder%\Desktop\Aplikasi.bat" "!userFolder!\SIMRSKhanza\Aplikasi.bat"
+    mklink /h "%userFolder%\Desktop\Aplikasi.bat" "!userFolder!\SIMRSKhanza\Aplikasi.bat"
     if %errorlevel% == 0 (
       echo Shortcut created successfully!
       pause
