@@ -6,7 +6,6 @@ set "userFolder=C:\Users\%username%"
 
 echo.
 echo.
-echo.
 echo **=========================================================================**
 echo **Installer SIMRSKhanza Onlaine**
 echo **RSU Diponegoro Dua Satu Klaten**
