@@ -3,63 +3,80 @@
 setlocal EnableDelayedExpansion
 
 set "userFolder=C:\Users\%username%"
+set "desktopFolder=%userFolder%\Desktop"
 
 echo.
 echo.
+echo.
 echo **=========================================================================**
-echo **Installer SIMRSKhanza Onlaine**
-echo **RSU Diponegoro Dua Satu Klaten**
-echo **Cahya Revanto**
+echo ** Installer SIMRSKhanza Online**
+echo ** RSU Diponegoro Dua Satu Klaten**
+echo ** Cahya Revanto**
 echo **=========================================================================**
 echo.
 echo.
 echo.
 
-if exist D:\ (
-  md D:\SIMRSKhanza
-  echo Folder "SIMRSKhanza" created on drive D:
-  git clone https://github.com/revan2159/SIMRSKhanza.git D:\SIMRSKhanza
-  if %errorlevel% == 0 (
-    echo Repository cloned successfully to drive D:!
-    echo %userFolder%\Desktop\Aplikasi.bat
-    echo "Show in New Window"
+rem Function to clone the repository to a specific folder and create a shortcut
+:cloneRepo
+if exist "%1" (
+    md "%1\SIMRSKhanza"
+    echo Folder "SIMRSKhanza" created in %1
+    git clone https://github.com/revan2159/SIMRSKhanza.git "%1\SIMRSKhanza"
+    if %errorlevel% == 0 (
+        echo Repository cloned successfully to %1!
+        echo "Working Directory: %1\SIMRSKhanza"
+        echo "Show in New Window"
+        echo.
+        pause
+        start explorer "%1\SIMRSKhanza"
+        exit /b 0
+    ) else (
+        echo Repository cloning failed! Error code: %errorlevel%
+        pause
+        exit /b 1
+    )
+)
+
+if exist "%ProgramFiles%\Git\cmd\git.exe" (
+    echo Git is already installed.
+    for /f "tokens=*" %%i in ('git --version') do echo %%i
     echo.
-    pause
-    start explorer D:\SIMRSKhanza\
-  ) else (
-    echo Repository cloning failed! Error code: %errorlevel%
-    pause
-  )
-) else if exist E:\ (
-  md E:\SIMRSKhanza
-  echo Folder "SIMRSKhanza" created on drive E:
-  git clone https://github.com/revan2159/SIMRSKhanza.git E:\SIMRSKhanza
-  if %errorlevel% == 0 (
-    echo Repository cloned successfully to drive E:!
-    echo "Working Directory: E:\SIMRSKhanza"
-    echo "Show in New Window"
+    timeout /t 3
+    echo Memulai Instal SIMRSKhanza...
     echo.
-    pause
-    start explorer E:\SIMRSKhanza\
-  ) else (
-    echo Repository cloning failed! Error code: %errorlevel%
-    pause
-  )
-) else (
-  md "!userFolder!\SIMRSKhanza"
-  echo Folder "SIMRSKhanza" created in user directory
-  git clone https://github.com/revan2159/SIMRSKhanza.git "!userFolder!\SIMRSKhanza"
-  if %errorlevel% == 0 (
-    echo Repository cloned successfully to user directory!
-    echo "Working Directory: !userFolder!\SIMRSKhanza"
-    echo "Show in New Window"
-    echo.
-    pause
-    start explorer !userFolder!\SIMRSKhanza\
-   ) else (
-    echo Repository cloning failed! Error code: %errorlevel%
-    pause
-  )
+    call :cloneRepo D:
+    if %errorlevel% neq 0 call :cloneRepo E:
+    if %errorlevel% neq 0 call :cloneRepo "!userFolder!"
+)
+
+rem Check for Git installation (informative message)
+if not exist "%ProgramFiles%\Git\cmd\git.exe" (
+    echo Git is not installed. Do you want to install it using Winget? (y/n)
+    set /p "choice="
+    if /i "%choice%" == "y" (
+        winget install --id Git.Git -e --source winget
+        if %errorlevel% == 0 (
+            echo Git installation successful!
+            rem Add Git to PATH for the current session
+            set "PATH=%ProgramFiles%\Git\cmd;%PATH%"
+            for /f "tokens=*" %%i in ('git --version') do echo %%i
+            echo.
+            timeout /t 3
+            echo Memulai Instal SIMRSKhanza...
+            echo.
+            call :cloneRepo D:
+            if %errorlevel% neq 0 call :cloneRepo E:
+            if %errorlevel% neq 0 call :cloneRepo "!userFolder!"
+        ) else (
+            echo Git installation failed! Error code: %errorlevel%
+            pause
+            exit /b 1
+        )
+    ) else (
+        echo Git installation skipped.
+        pause
+    )
 )
 
 endlocal
