@@ -5,11 +5,6 @@ setlocal EnableDelayedExpansion
 set "userFolder=C:\Users\%username%"
 set "desktopFolder=%userFolder%\Desktop"
 
-@REM run the script as administrator
-if not "%1"=="am_admin" (
-    powershell start -verb runas '%0' am_admin
-    exit /b
-)
 echo.
 echo.
 echo.
@@ -25,6 +20,7 @@ echo.
 rem Function to clone the repository to a specific folder and create a shortcut
 :cloneRepo
 if exist "%1" (
+    set "PATH=%ProgramFiles%\Git\cmd;%PATH%"
     md "%1\SIMRSKhanza"
     echo Folder "SIMRSKhanza" created in %1
     git clone https://github.com/revan2159/SIMRSKhanza.git "%1\SIMRSKhanza"
@@ -34,7 +30,7 @@ if exist "%1" (
         echo Copying the required files to the Java bin folder...
         xcopy /s /y "%1\SIMRSKhanza\lib\*" "%ProgramFiles%\BellSoft\LibericaJDK-15-Full\bin"
         echo.
-        echo Shortcut "DAplikasi" created on the desktop
+        echo Shortcut "Aplikasi" created on the desktop
         powershell -command "(New-Object -ComObject WScript.Shell).CreateShortcut('%desktopFolder%\Aplikasi.lnk').TargetPath = '%1\SIMRSKhanza\Aplikasi.bat'"
         powershell -command "(New-Object -ComObject WScript.Shell).CreateShortcut('%desktopFolder%\Aplikasi.lnk').Save()"
         echo.
@@ -72,8 +68,6 @@ if exist "%ProgramFiles%\Git\cmd\git.exe" (
         winget install --id BellSoft.LibericaJDK.15.Full -e --source winget
         if %errorlevel% == 0 (
             echo Java installation successful!
-            @REM Create system environment variable for "JAVA_HOME" and add it to PATH
-            setx JAVA_HOME "%ProgramFiles%\BellSoft\LibericaJDK-15-Full" /m
             rem Add Java to PATH for the current session
             set "PATH=%ProgramFiles%\BellSoft\LibericaJDK-15-Full\bin;%PATH%"
             for /f "tokens=*" %%i in ('java --version') do echo %%i
