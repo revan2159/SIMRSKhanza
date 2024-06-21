@@ -27,13 +27,6 @@ if exist "%1" (
     if %errorlevel% == 0 (
         echo Repository cloned successfully to %1!
         echo.
-        echo Copying the required files to the Java bin folder...
-        xcopy /s /y "%1\SIMRSKhanza\lib\*" "%ProgramFiles%\BellSoft\LibericaJDK-15-Full\bin"
-        echo.
-        echo Shortcut "Aplikasi" created on the desktop
-        powershell -command "(New-Object -ComObject WScript.Shell).CreateShortcut('%desktopFolder%\Aplikasi.lnk').TargetPath = '%1\SIMRSKhanza\Aplikasi.bat'"
-        powershell -command "(New-Object -ComObject WScript.Shell).CreateShortcut('%desktopFolder%\Aplikasi.lnk').Save()"
-        echo.
         echo "Working Directory: %1\SIMRSKhanza"
         echo "Show in New Window"
         echo.
