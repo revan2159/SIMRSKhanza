@@ -29,7 +29,12 @@ if exist "%1" (
         echo.
         echo "Working Directory: %1\SIMRSKhanza"
         echo "Show in New Window"
-        echo.
+        echo .
+        echo **=========================================================================**
+        echo ** 1. Copy semua file yang ada difolder %1\SIMRSKhanza\lib ke folder %ProgramFiles%\BellSoft\LibericaJDK-15-Full\bin\**
+        echo ** 2. Buat shortcut file %1\SIMRSKhanza\Aplikasi.bat ke desktop**
+        echo ** 3. Test aplikasi dengan menjalankan shortcut file Aplikasi.bat di desktop**
+        echo **=========================================================================**
         pause
         start explorer "%1\SIMRSKhanza"
         exit /b 0
