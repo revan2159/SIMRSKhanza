@@ -74,8 +74,8 @@ if exist "%ProgramFiles%\Git\cmd\git.exe" (
             echo Memulai Instal SIMRSKhanza...
             echo.
             call :cloneRepo D:
-            if %errorlevel% neq 0 call :cloneRepo E:
             if %errorlevel% neq 0 call :cloneRepo "!userFolder!"
+            if %errorlevel% neq 0 call :cloneRepo E:
         ) else (
             echo Java installation failed! Error code: %errorlevel%
             pause
@@ -97,8 +97,6 @@ if exist "%ProgramFiles%\Git\cmd\git.exe" (
             winget install --id BellSoft.LibericaJDK.15.Full -e --source winget
                 if %errorlevel% == 0 (
                 echo Java installation successful!
-                @REM Create system environment variable for "JAVA_HOME" and add it to PATH
-                setx JAVA_HOME "%ProgramFiles%\BellSoft\LibericaJDK-15-Full" /m
                 rem Add Java to PATH for the current session
                 set "PATH=%ProgramFiles%\BellSoft\LibericaJDK-15-Full\bin;%PATH%"
                 for /f "tokens=*" %%i in ('java --version') do echo %%i
