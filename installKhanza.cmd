@@ -42,12 +42,17 @@ if exist "%ProgramFiles%\Git\cmd\git.exe" (
     echo Git is already installed.
     for /f "tokens=*" %%i in ('git --version') do echo %%i
     echo.
+    if exist "%ProgramFiles%\BellSoft\LibericaJDK-15-Full\bin\java.exe" (
+    echo Java is already installed.
+    for /f "tokens=*" %%i in ('java --version') do echo %%i
+    echo.
     timeout /t 3
     echo Memulai Instal SIMRSKhanza...
     echo.
     call :cloneRepo D:
     if %errorlevel% neq 0 call :cloneRepo E:
     if %errorlevel% neq 0 call :cloneRepo "!userFolder!"
+    )
 )
 
 rem Check for Git installation (informative message)
@@ -62,12 +67,48 @@ if not exist "%ProgramFiles%\Git\cmd\git.exe" (
             set "PATH=%ProgramFiles%\Git\cmd;%PATH%"
             for /f "tokens=*" %%i in ('git --version') do echo %%i
             echo.
-            timeout /t 3
-            echo Memulai Instal SIMRSKhanza...
-            echo.
-            call :cloneRepo D:
-            if %errorlevel% neq 0 call :cloneRepo E:
-            if %errorlevel% neq 0 call :cloneRepo "!userFolder!"
+            if not exist "%ProgramFiles%\BellSoft\LibericaJDK-15-Full\bin\java.exe" (
+                echo Java is not installed. Do you want to install it using Winget? (y/n)
+                set /p "choice="
+                if /i "%choice%" == "y" (
+                    winget install --id BellSoft.LibericaJDK15 -e --source winget
+                    if %errorlevel% == 0 (
+                        echo Java installation successful!
+                        rem Add Java to PATH for the current session
+                        set "PATH=%ProgramFiles%\BellSoft\LibericaJDK-15-Full\bin;%PATH%"
+                        for /f "tokens=*" %%i in ('java --version') do echo %%i
+                        echo.
+                        timeout /t 3
+                        echo Memulai Instal SIMRSKhanza...
+                        echo.
+                        call :cloneRepo D:
+                        if %errorlevel% neq 0 call :cloneRepo E:
+                        if %errorlevel% neq 0 call :cloneRepo "!userFolder!"
+                    ) else (
+                        echo Java installation failed! Error code: %errorlevel%
+                        pause
+                        exit /b 1
+                    )
+                ) else (
+                    echo Java installation skipped.
+                    timeout /t 3
+                    echo Memulai Instal SIMRSKhanza...
+                    echo.
+                    call :cloneRepo D:
+                    if %errorlevel% neq 0 call :cloneRepo E:
+                    if %errorlevel% neq 0 call :cloneRepo "!userFolder!"
+                )
+            ) else (
+                echo Java is already installed.
+                for /f "tokens=*" %%i in ('java --version') do echo %%i
+                echo.
+                timeout /t 3
+                echo Memulai Instal SIMRSKhanza...
+                echo.
+                call :cloneRepo D:
+                if %errorlevel% neq 0 call :cloneRepo E:
+                if %errorlevel% neq 0 call :cloneRepo "!userFolder!"
+            )
         ) else (
             echo Git installation failed! Error code: %errorlevel%
             pause
@@ -78,5 +119,6 @@ if not exist "%ProgramFiles%\Git\cmd\git.exe" (
         pause
     )
 )
+
 
 endlocal
