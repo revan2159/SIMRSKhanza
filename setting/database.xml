@@ -97,7 +97,7 @@
     <entry key="RUANGANAKTIFINVENTARIS"></entry>
     <entry key="BASENOREG">booking</entry>
     <entry key="URUTNOREG">dokter + poli</entry>
-    <entry key="JADWALDOKTERDIREGISTRASI">nonaktif</entry>    
+    <entry key="JADWALDOKTERDIREGISTRASI">aktif</entry>    
     <entry key="IPPRINTERTRACER"></entry>
     <entry key="URLAPIINHEALTH">http://development.inhealth.co.id/pelkesws2</entry>
     <entry key="TOKENINHEALTH">l4nh5eVYrLAER/I2A4b3Tw==</entry>
