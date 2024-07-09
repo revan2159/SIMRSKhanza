@@ -66,6 +66,12 @@
     <entry key="USERKEYAPIPCARE">l4nh5eVYrLAER/I2A4b3Tw==</entry>
     <entry key="PASSPCARE">l4nh5eVYrLAER/I2A4b3Tw==</entry>
     <entry key="USERPCARE">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="URLMOBILEJKNFKTP">https://apijkn-dev.bpjs-kesehatan.go.id/antreanfktp_dev</entry>
+    <entry key="SECRETKEYMOBILEJKNFKTP">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="CONSIDMOBILEJKNFKTP">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="USERKEYMOBILEJKNFKTP">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="PASSMOBILEJKNFKTP">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="USERMOBILEJKNFKTP">l4nh5eVYrLAER/I2A4b3Tw==</entry>
     <entry key="DIVREGPCARE">REGIONAL V-JAWA TENGAH</entry>
     <entry key="KACABPCARE">SURAKARTA</entry>
     <entry key="URLAPISISRUTE">https://api.sisrute.kemkes.go.id</entry>
@@ -97,7 +103,8 @@
     <entry key="RUANGANAKTIFINVENTARIS"></entry>
     <entry key="BASENOREG">booking</entry>
     <entry key="URUTNOREG">dokter + poli</entry>
-    <entry key="JADWALDOKTERDIREGISTRASI">aktif</entry>    
+    <entry key="JADWALDOKTERDIREGISTRASI">yes</entry>    
+    <entry key="KUNCIDOKTERRANAP">cj8o6eBdSn+TiUrBgGoElQ==</entry>    
     <entry key="IPPRINTERTRACER"></entry>
     <entry key="URLAPIINHEALTH">http://development.inhealth.co.id/pelkesws2</entry>
     <entry key="TOKENINHEALTH">l4nh5eVYrLAER/I2A4b3Tw==</entry>
@@ -157,4 +164,13 @@
     <entry key="PORTORTHANC">4xOkFa6gxM9Bc/dkpEtJ+A==</entry>
     <entry key="USERORTHANC">V9bi0P2HgAq8Nn8lUyS6/A==</entry>
     <entry key="PASSORTHANC">V9bi0P2HgAq8Nn8lUyS6/A==</entry>
+    <entry key="SFTPMANDIRIPATHPEMBAYARANPIHAKKETIGA">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="SFTPMANDIRIPATHPEMBAYARANPAJAK">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="SFTPMANDIRIPATHPEMBAYARANVIRTUALACCOUNT">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="SFTPMANDIRIPATHACK">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="SFTPMANDIRIPATHMT940">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="SFTPMANDIRIHOST">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="SFTPMANDIRIPORT">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="SFTPMANDIRIUSER">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="SFTPMANDIRIPAS">l4nh5eVYrLAER/I2A4b3Tw==</entry>
 </properties>
