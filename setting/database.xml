@@ -177,4 +177,7 @@
     <entry key="URLAPLIKASIFINGERPRINTBPJS">C:\\Program Files (x86)\\BPJS Kesehatan\\Aplikasi Sidik Jari BPJS Kesehatan\\After.exe</entry>
     <entry key="USERFINGERPRINTBPJS">tYMJsCkNHX21YHjuN9Me5Q==</entry>
     <entry key="PASSWORDFINGERPRINTBPJS">PaEXg8U0NLP0TWHj0pVFAA==</entry>
+    <entry key="URLAPIAPM">https://api.rsdiponegoroduasatu.com</entry>
+    <entry key="APMID">APT2FdB1aaxT2s1RMwuqb0t+zPtJuXZE5OqDPa/w5Nty73uxf3pEgU6BB5PckA+u</entry>
+    <entry key="APMSECRET">3imt1IGuGN5XoqnP+eRbRPZkKsR0Vki8++gbezVvLwNpnWxyKPaIbgveHbEaU0km</entry>
 </properties>
