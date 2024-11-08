@@ -101,7 +101,7 @@
     <entry key="DOKTERAKTIFKASIRRALAN"></entry>
     <entry key="POLIAKTIFKASIRRALAN"></entry>
     <entry key="RUANGANAKTIFINVENTARIS"></entry>
-    <entry key="BASENOREG">booking</entry>
+    <entry key="BASENOREG">registrasi</entry>
     <entry key="URUTNOREG">dokter + poli</entry>
     <entry key="JADWALDOKTERDIREGISTRASI">yes</entry>    
     <entry key="KUNCIDOKTERRANAP">cj8o6eBdSn+TiUrBgGoElQ==</entry>    
@@ -173,6 +173,15 @@
     <entry key="SFTPMANDIRIPORT">l4nh5eVYrLAER/I2A4b3Tw==</entry>
     <entry key="SFTPMANDIRIUSER">l4nh5eVYrLAER/I2A4b3Tw==</entry>
     <entry key="SFTPMANDIRIPAS">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="URLAPIESIGN">http://localhost</entry>
+    <entry key="USERNAMEAPIESIGN">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="PASSAPIESIGN">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="URLAKSESFILEESIGN">http://localhost</entry>
+    <entry key="SFTPFILEESIGNHOST">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="SFTPFILEESIGNPORT">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="SFTPFILEESIGNUSER">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="SFTPFILEESIGNPAS">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="SFTPFILEESIGNFOLDER">l4nh5eVYrLAER/I2A4b3Tw==</entry>
     <entry key="URLFINGERPRINTBPJS"></entry>
     <entry key="URLAPLIKASIFINGERPRINTBPJS">C:\\Program Files (x86)\\BPJS Kesehatan\\Aplikasi Sidik Jari BPJS Kesehatan\\After.exe</entry>
     <entry key="USERFINGERPRINTBPJS">tYMJsCkNHX21YHjuN9Me5Q==</entry>
