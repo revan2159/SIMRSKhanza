@@ -1,0 +1,67 @@
+.putih {
+  color: #ffffff !important;
+}
+
+.bg_urgensi {
+  background: #c8c800 !important;
+  color: #ffffff !important;
+}
+
+.bg_urgensi_noborder {
+  background: #c8c800 !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.bg_segera {
+  background: #aa0000 !important;
+  color: #ffffff !important;
+}
+
+.bg_segera_noborder {
+  background: #aa0000 !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.bg_emergensi {
+  background: #ff0000 !important;
+  color: #ffffff !important;
+}
+
+.bg_emergensi_noborder {
+  background: #ff0000 !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.bg_urgensi_rendah {
+  background: #00aa00 !important;
+  color: #ffffff !important;
+}
+
+.bg_urgensi_rendah_noborder {
+  background: #00aa00 !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.bg_non_urgensi {
+  background: #969696 !important;
+  color: #ffffff !important;
+}
+
+.bg_non_urgensi_noborder {
+  background: #969696 !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.sep {
+  background-color: #ffffff !important;
+  border: none !important;
+}
+
+.sep tr td {
+  border: none !important;
+}

@@ -40,3 +40,9 @@ Oct 28, 2024 2:18:36 PM fungsi.LogService info
 INFO: Memulai memverifikasi biometri sidik jari..
 Oct 28, 2024 2:18:38 PM fungsi.LogService info
 INFO: Berhasil setelah 1 percobaan.
+Dec 19, 2024 8:23:56 PM fungsi.LogService severe
+SEVERE: Error : no protocol: null/v1/oauth/token
+Dec 19, 2024 8:25:09 PM fungsi.LogService severe
+SEVERE: Error : no protocol: null/v1/oauth/token
+Dec 19, 2024 8:27:30 PM fungsi.LogService severe
+SEVERE: Error : no protocol: null/v1/oauth/token
