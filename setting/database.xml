@@ -104,7 +104,7 @@
     <entry key="BASENOREG">registrasi</entry>
     <entry key="URUTNOREG">dokter + poli</entry>
     <entry key="JADWALDOKTERDIREGISTRASI">yes</entry>    
-    <entry key="KUNCIDOKTERRANAP">cj8o6eBdSn+TiUrBgGoElQ==</entry>    
+    <entry key="KUNCIDOKTERRANAP">88tE0ZUstuza/UrtfBYkFA==</entry>    
     <entry key="IPPRINTERTRACER"></entry>
     <entry key="URLAPIINHEALTH">http://development.inhealth.co.id/pelkesws2</entry>
     <entry key="TOKENINHEALTH">l4nh5eVYrLAER/I2A4b3Tw==</entry>
@@ -186,7 +186,7 @@
     <entry key="URLAPLIKASIFINGERPRINTBPJS">C:\\Program Files (x86)\\BPJS Kesehatan\\Aplikasi Sidik Jari BPJS Kesehatan\\After.exe</entry>
     <entry key="USERFINGERPRINTBPJS">tYMJsCkNHX21YHjuN9Me5Q==</entry>
     <entry key="PASSWORDFINGERPRINTBPJS">pUUh0Y0RRo5rfCfFM6lc9g==</entry>
-    <entry key="URLAPIAPM">https://api.rsdiponegoroduasatu.com</entry>
-    <entry key="APMID">APT2FdB1aaxT2s1RMwuqb0t+zPtJuXZE5OqDPa/w5Nty73uxf3pEgU6BB5PckA+u</entry>
-    <entry key="APMSECRET">3imt1IGuGN5XoqnP+eRbRPZkKsR0Vki8++gbezVvLwNpnWxyKPaIbgveHbEaU0km</entry>
+    <entry key="URLAPISIMRS">https://api.rsdiponegoroduasatu.com</entry>
+    <entry key="SIMRSAPIID">APT2FdB1aaxT2s1RMwuqb0t+zPtJuXZE5OqDPa/w5Nty73uxf3pEgU6BB5PckA+u</entry>
+    <entry key="SIMRSAPISECRET">3imt1IGuGN5XoqnP+eRbRPZkKsR0Vki8++gbezVvLwNpnWxyKPaIbgveHbEaU0km</entry>
 </properties>
